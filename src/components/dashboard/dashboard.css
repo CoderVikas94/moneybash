@@ -47,6 +47,7 @@ body {
 .dashboard__box_content .networth__box .networth__box__text>span {
   display: flex;
   align-items: center;
+  cursor: pointer;
   
 }
 .dashboard__box_content .networth__box .networth__box__text>span>h2 {
@@ -84,6 +85,8 @@ body {
   padding: 0 01rem 0 1rem;
   border-bottom: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
   background-color: rgba(77,78,80,.05);
+  cursor: pointer;
+
 
 
 }
@@ -135,6 +138,7 @@ body {
 .transaction__box .transaction__box__text>span {
   display: flex;
   align-items: center;
+  cursor: pointer;
 
 }
 .transaction__box .transaction__box__text>span>h2 {
@@ -145,6 +149,7 @@ body {
 .recent__box .recent__box__text>span {
   display: flex;
   align-items: center;
+  cursor: pointer;
 
 }
 
@@ -162,19 +167,22 @@ body {
 .transaction__box__table_box .transaction__box__table .transaction__box__table_head {
   display:flex ;
   height: 2.5rem;
-  border-bottom: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15) !important;
   background-color: rgba(77,78,80,.05);
+  border-collapse: collapse;
+
 }
 .transaction__box__table_box .transaction__box__table .transaction__box__table_head>span {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-basis: 33.33%;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   border: 0.01rem solid rgba(0, 0, 0, 0.15) !important;
   border-collapse: collapse;
+  color: rgba(0, 0, 0, 0.7);
 
 
 

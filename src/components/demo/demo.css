@@ -60,6 +60,12 @@ body {
   color: rgba(0, 0, 0, 0.5);
   position: relative;
   font-weight: 500;
+  cursor: pointer;
+
+}
+.demo__text button:hover {
+  background: rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
 
 }
 .demo__text button > span {

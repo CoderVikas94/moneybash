@@ -134,6 +134,9 @@ const Dashboard = () => {
                       <span>Transfer</span>
                       <span>Income</span>
                     </div>
+                    <div className="transaction__box__table_form">
+                      <input/>
+                    </div>
                   </div>
                 </div>
               </>
@@ -152,7 +155,9 @@ const Dashboard = () => {
             </div>
             {recent === true && (
               <>
-                <div className="recent__box_table_box"></div>
+                <div className="recent__box_table_box">
+
+                </div>
               </>
             )}
           </div>
