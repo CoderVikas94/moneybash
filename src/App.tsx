@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./components/header/Header";
+import Sidebar from "./components/sidebar/Sidebar";
+import Dashboard from "./components/dashboard/Dashboard";
+import Transactions from "./components/transactions/Transactions";
+import Accounts from "./components/accounts/Accounts";
+import Reports from "./components/reports/Reports";
+import Budget from "./components/budget/Budget";
+import Settings from "./components/settings/Settings";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BrowserRouter>
+      <div className="main_container">
+        <Header />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Dashboard />}></Route>
+            <Route path="transactions" element={<Transactions />}></Route>
+            <Route path="accounts" element={<Accounts />}></Route>
+            <Route path="reports" element={<Reports />}></Route>
+            <Route path="budget" element={<Budget />}></Route>
+            <Route path="settings" element={<Settings />}></Route>
+          </Routes>
+        </div>
+        <Sidebar />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

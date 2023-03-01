@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.dashboard__box {
+  padding: 1rem 11rem 2rem 8rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.dashboard__box_content {
+  margin-top: 1rem;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  background: white;
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  gap: 2rem;
+  font-family: "Lato", sans-serif;
+  box-shadow: 0 2px 6px 0 rgb(34 36 38 / 15%), 0 2px 18px 0 rgb(34 36 38 / 17%);
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+.dashboard__box_content .networth__box {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.dashboard__box_content .networth__box .networth__box__text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+
+}
+.dashboard__box_content .networth__box .networth__box__text>span {
+  display: flex;
+  align-items: center;
+  
+}
+.dashboard__box_content .networth__box .networth__box__text>span>h2 {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  
+}
+
+.dashboard__box_content .networth__box .networth__box__text>span>.icon-right {
+  font-size: 1.3rem;
+}
+.networth__box__text>h2 {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #21ba45;
+
+}
+
+
+.dashboard__box_content .nettransactions__box {
+  flex-basis: 60%;
+}
+
+.networth__box__table_box {
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.3rem;
+  
+}
+.cash__box {
+  display:flex ;
+  justify-content: space-between;
+  padding: 0 01rem 0 1rem;
+  border-bottom: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  background-color: rgba(77,78,80,.05);
+
+
+}
+.cash__box>h3 {
+  font-size: 1.01rem;
+  font-weight: 400;
+} 
+.cash__box>h3:last-child {
+  color: #21ba45;
+  letter-spacing: 0.02rem;
+
+
+}
+.wallet__box {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+
+
+}
+.wallet__name_box_text {
+  display: flex;
+  flex-direction: column;
+  
+
+}
+.wallet__name_box_text>h3 {
+  color: #21ba45;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  font-size: 1rem;
+  margin: 0.12rem 0.12rem;
+
+}
+.wallet__name_box  {
+  display: flex;
+  justify-content: start;
+  
+}
+.wallet__name_box >a {
+  color: #4183c4;
+  text-decoration: none;
+  font-size: 0.9rem;
+
+}
