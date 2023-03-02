@@ -1,8 +1,13 @@
 import Demo from "../demo/Demo";
 import "./dashboard.css";
 import { IoMdArrowDropdown, IoMdArrowDropright } from "react-icons/io";
+import { MdOutlineEdit } from "react-icons/md";
+import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Select } from "antd";
+import type { SelectProps } from "antd";
+import { color } from "@mui/system";
 
 const Dashboard = () => {
   const [show, setShow] = useState(false);
@@ -11,6 +16,33 @@ const Dashboard = () => {
   const [credit, setCredit] = useState(false);
   const [transaction, setTransaction] = useState(false);
   const [recent, setRecent] = useState(false);
+  const [expense, setExpense] = useState(false);
+  const [transfer, setTransfer] = useState(false);
+  const [income, setIncome] = useState(false);
+  const [active, setActive] = useState("black");
+  const [Tactive, setTActive] = useState("black");
+
+  const options: SelectProps["options"] = [];
+
+  {
+    options.push({
+      value: `Alice's Wallet`,
+      label: `Alice's Wallet Cash`,
+    });
+  }
+
+  const optionscurrency: SelectProps["options"] = [];
+
+  {
+    optionscurrency.push({
+      value: `USD`,
+      label: `USD`,
+    });
+  }
+
+  const handleChange = (value: string) => {
+    console.log(`selected ${value}`);
+  };
 
   return (
     <div className="dashboard__box">
@@ -116,7 +148,13 @@ const Dashboard = () => {
         <div className="nettransactions__box">
           <div className="transaction__box">
             <div className="transaction__box__text">
-              <span onClick={() => setTransaction(!transaction)}>
+              <span
+                onClick={() => {
+                  setTransaction(!transaction);
+                  setExpense(true);
+                  setActive("red");
+                }}
+              >
                 {transaction === true ? (
                   <IoMdArrowDropdown className="icon-right" />
                 ) : (
@@ -130,13 +168,256 @@ const Dashboard = () => {
                 <div className="transaction__box__table_box">
                   <div className="transaction__box__table">
                     <div className="transaction__box__table_head">
-                      <span>Expense</span>
-                      <span>Transfer</span>
-                      <span>Income</span>
+                      <span
+                        onClick={() => {
+                          setExpense(true);
+                          setTransfer(false);
+                          setIncome(false);
+                          setActive("red");
+                          setTActive("black");
+                        }}
+                        style={{ color: active }}
+                      >
+                        Expense
+                      </span>
+                      <span
+                        onClick={() => {
+                          setTransfer(true);
+                          setExpense(false);
+                          setIncome(false);
+                          setActive("black");
+                          setTActive("black");
+                        }}
+                      >
+                        Transfer
+                      </span>
+                      <span
+                        onClick={() => {
+                          setIncome(true);
+                          setExpense(false);
+                          setTransfer(false);
+                          setActive("black");
+                          setTActive("green");
+                        }}
+                        style={{ color: Tactive }}
+                      >
+                        Income
+                      </span>
                     </div>
-                    <div className="transaction__box__table_form">
-                      <input/>
-                    </div>
+                    {expense === true && transaction === true && (
+                      <>
+                        <div className="transaction__box__table_form">
+                          <div className="from__box">
+                            <label>From</label>
+                            <Select
+                              size={"large"}
+                              defaultValue="Alice's wallet"
+                              onChange={handleChange}
+                              style={{
+                                width: "100%",
+                                marginTop: "0.3rem",
+                                borderRadius: "0.01rem",
+                              }}
+                              options={options}
+                              className="from_label"
+                            />
+                          </div>
+                          <div className="currency__box">
+                            <input
+                              id="currency"
+                              type={"number"}
+                              step="0.01"
+                              min="0"
+                              max="10"
+                              placeholder="0.03"
+                            />
+                            <Select
+                              size={"large"}
+                              defaultValue="USD"
+                              onChange={handleChange}
+                              style={{ width: "40%" }}
+                              options={optionscurrency}
+                              className="currency"
+                            />
+                          </div>
+                        </div>
+                        <div className="choose__box">
+                          <div className="choose__box_tags">
+                            <label>Tags</label>
+                            <Select
+                              size={"large"}
+                              defaultValue="Choose existing tags or add new"
+                              onChange={handleChange}
+                              style={{
+                                width: "100%",
+                                marginTop: "0.3rem",
+                                borderRadius: "0.01rem",
+                                color: "rgba(0, 0, 0, 0.15)",
+                              }}
+                              options={options}
+                              className="choose_label"
+                            />
+                          </div>
+                          <input type={"date"} value="2023-03-02" />
+                        </div>
+                        <div className="note__box">
+                          <input type={"text"} placeholder={"Note"} />
+                          <button>Add Expense</button>
+                        </div>
+                      </>
+                    )}
+                    {transfer === true && (
+                      <>
+                        <div className="transaction__box__table_form">
+                          <div className="from__box">
+                            <label>From</label>
+                            <Select
+                              size={"large"}
+                              defaultValue="Alice's wallet"
+                              onChange={handleChange}
+                              style={{
+                                width: "100%",
+                                marginTop: "0.3rem",
+                                borderRadius: "0.01rem",
+                              }}
+                              options={options}
+                              className="from_label"
+                            />
+                          </div>
+                          <div className="currency__box">
+                            <input
+                              id="currency"
+                              type={"number"}
+                              step="0.01"
+                              min="0"
+                              max="10"
+                              placeholder="0.03"
+                            />
+                            <Select
+                              size={"large"}
+                              defaultValue="USD"
+                              onChange={handleChange}
+                              style={{ width: "40%" }}
+                              options={optionscurrency}
+                              className="currency"
+                            />
+                          </div>
+                        </div>
+                        <div className="choose__box">
+                          <div className="choose__box_tags">
+                            <label>To</label>
+                            <Select
+                              size={"large"}
+                              defaultValue="Bob's Wallet"
+                              onChange={handleChange}
+                              style={{
+                                width: "100%",
+                                marginTop: "0.3rem",
+                                borderRadius: "0.01rem",
+                                color: "rgba(0, 0, 0, 0.15)",
+                              }}
+                              options={options}
+                              className="choose_label"
+                            />
+                          </div>
+                          <div className="currency__box">
+                            <input
+                              id="currency"
+                              type={"number"}
+                              step="0.01"
+                              min="0"
+                              max="10"
+                              placeholder="0.03"
+                            />
+                            <Select
+                              size={"large"}
+                              defaultValue="USD"
+                              onChange={handleChange}
+                              style={{ width: "40%" }}
+                              options={optionscurrency}
+                              className="currency"
+                            />
+                          </div>
+                        </div>
+                        <div className="note__box">
+                          <input
+                            type={"text"}
+                            placeholder={"Note"}
+                            style={{ flexBasis: "53%" }}
+                          />
+                          <input
+                            type={"date"}
+                            value="2023-03-02"
+                            style={{ flexBasis: "30%" }}
+                          />
+                        </div>
+                        <div className="transfer__btn_box">
+                          <button>Add Expense</button>
+                        </div>
+                      </>
+                    )}
+                    {income === true && (
+                      <>
+                        <div className="transaction__box__table_form">
+                          <div className="from__box">
+                            <label>To</label>
+                            <Select
+                              size={"large"}
+                              defaultValue="Alice's wallet"
+                              onChange={handleChange}
+                              style={{
+                                width: "100%",
+                                marginTop: "0.3rem",
+                                borderRadius: "0.01rem",
+                              }}
+                              options={options}
+                              className="from_label"
+                            />
+                          </div>
+                          <div className="currency__box">
+                            <input
+                              id="currency"
+                              type={"number"}
+                              step="0.01"
+                              min="0"
+                              max="10"
+                              placeholder="0.03"
+                            />
+                            <Select
+                              size={"large"}
+                              defaultValue="USD"
+                              onChange={handleChange}
+                              style={{ width: "40%" }}
+                              options={optionscurrency}
+                              className="currency"
+                            />
+                          </div>
+                        </div>
+                        <div className="choose__box">
+                          <div className="choose__box_tags">
+                            <label>Tags</label>
+                            <Select
+                              size={"large"}
+                              defaultValue="Choose existing tags or add new"
+                              onChange={handleChange}
+                              style={{
+                                width: "100%",
+                                marginTop: "0.3rem",
+                                borderRadius: "0.01rem",
+                                color: "rgba(0, 0, 0, 0.15)",
+                              }}
+                              options={options}
+                              className="choose_label"
+                            />
+                          </div>
+                          <input type={"date"} value="2023-03-02" />
+                        </div>
+                        <div className="note__box">
+                          <input type={"text"} placeholder={"Note"} />
+                          <button>Add Expense</button>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </>
@@ -156,7 +437,83 @@ const Dashboard = () => {
             {recent === true && (
               <>
                 <div className="recent__box_table_box">
-
+                  <div className="recent__text__box">
+                    <div className="recent__text__box_name">
+                      <span>28 Feb</span>
+                      <span> Alice's wallet </span>
+                    </div>
+                    <div className="recent__text__box_money">
+                      <p>6.00 USD</p>
+                      <span>
+                        <MdOutlineEdit className="icon-edit" />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="recent__text__box">
+                    <div className="recent__text__box_name">
+                      <span>01 May</span>
+                      <span>Checking</span>
+                      <span>
+                        <FaArrowRight />
+                      </span>
+                      <span>Visa *2474</span>
+                     <span>credit card payment</span>
+                    </div>
+                    <div className="recent__text__box_money">
+                      <p>588.20 USD</p>
+                      <span>
+                        <MdOutlineEdit className="icon-edit" />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="recent__text__box">
+                    <div className="recent__text__box_name">
+                    <span>30 Apr</span>
+                      <span>Checking</span>
+                      <span>
+                        <FaArrowRight />
+                      </span>
+                      <span>Savings</span>
+                    </div>
+                    <div className="recent__text__box_money">
+                      <p>6.00 USD</p>
+                      <span>
+                        <MdOutlineEdit className="icon-edit" />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="recent__text__box">
+                    <div className="recent__text__box_name">
+                    <span>30 Apr</span>
+                      <span>Checking</span>
+                      <span>
+                        <FaArrowRight />
+                      </span>
+                      <button>Social security</button>
+                    </div>
+                    <div className="recent__text__box_money">
+                      <p>6.00 USD</p>
+                      <span>
+                        <MdOutlineEdit className="icon-edit" />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="recent__text__box">
+                    <div className="recent__text__box_name">
+                    <span>30 Apr</span>
+                      <span>Checking</span>
+                      <span>
+                        <FaArrowRight />
+                      </span>
+                      <button>Income Tax</button>
+                    </div>
+                    <div className="recent__text__box_money">
+                      <p>6.00 USD</p>
+                      <span>
+                        <MdOutlineEdit className="icon-edit" />
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </>
             )}

@@ -187,3 +187,292 @@ body {
 
 
 }
+.transaction__box__table_form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.2rem 0.5rem 0.1rem 0.5rem;
+}
+.transaction__box__table_form>.from__box {
+  flex-basis: 60%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction__box__table_form>.from__box .from_label .ant-select {
+  width: 100%!important;
+} 
+.transaction__box__table_form label .from_label {
+  margin-top: 0.5rem!important;
+}
+.transaction__box__table_form>.currency__box {
+ flex-basis: 40%;
+ margin-top: 1.3rem;
+ display: flex;
+ align-items: center;
+
+}
+.transaction__box__table_form>.currency__box>span {
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 100%;
+
+}
+.transaction__box__table_form>.currency__box>input {
+  width: 3rem;
+  height: 2.35rem;
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-right: none;
+  padding: 0 1rem 0 2rem;
+}
+.currency__box input:hover{
+  border: 0.2rem solid #96c8da;
+
+}
+ .currency__box input:focus-within {
+  border: none;
+}
+.transaction__box__table_form>span>.currency {
+  width: 30%!important;
+  height: 110%!important;
+
+}
+.transaction__box__table_form>.currency__box> :where(.css-dev-only-do-not-override-10ed4xt).ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+background-color: rgba(0, 0, 0, 0.15);
+border-radius: 0px 8px 8px 0px;
+
+}
+
+.choose__box {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.2rem 0.5rem 0.1rem 0.5rem;
+  
+}
+.choose__box>input[type=date] {
+  border: 0.12rem solid #d9d9d9 !important;
+
+
+}
+.choose__box>.choose__box_tags {
+
+  flex-basis: 58%;
+}
+.choose__box>.choose__box_tags label {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.choose_label .ant-select-selection-item {
+ color : rgba(0, 0, 0, 0.4);
+ font-size: 0.9rem;
+}
+.choose__box>input {
+   margin-top: 1.2rem;
+  flex-basis: 30%;
+  height: 2.35rem;
+  border: 0.12rem solid #d9d9d9 !important;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  font-size: 1rem;
+
+}
+
+.note__box {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem 0.1rem 0.5rem;
+  gap: 1.25rem;
+
+
+}
+.note__box>input {
+  flex-basis: 54%;
+  height: 2.35rem;
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.5rem;
+  padding: 0 1rem 0 0.5rem;
+
+
+}
+.note__box>button {
+  flex-basis: 33.5%;
+  height: 2.35rem;
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.5rem;
+  background-color: #3f51b5!important;
+  color: #fff;
+
+
+
+}
+
+
+.choose__box>.currency__box {
+  flex-basis: 40%;
+  margin-top: 1.3rem;
+  display: flex;
+  align-items: center;
+ 
+ }
+ .choose__box>.currency__box>span {
+   background-color: rgba(0, 0, 0, 0.15);
+   width: 100%;
+ 
+ }
+ .choose__box>.currency__box>input {
+   width: 3rem;
+   height: 2.35rem;
+   border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+   border-bottom-left-radius: 0.5rem;
+   border-top-left-radius: 0.5rem;
+   border-right: none;
+   padding: 0 1rem 0 2rem;
+ }
+ .currency__box input:hover{
+   border: 0.2rem solid #96c8da;
+ 
+ }
+  .currency__box input:focus-within {
+   border: none;
+ }
+ .choose__box_form>span>.currency {
+   width: 30%!important;
+   height: 110%!important;
+ 
+ }
+ .currency__box> :where(.css-dev-only-do-not-override-10ed4xt).ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+ background-color: rgba(0, 0, 0, 0.15);
+ border-radius: 0px 8px 8px 0px;
+ 
+ }
+
+.transfer__btn_box {
+  display: flex;
+  justify-content: end;
+  padding: 0.2rem 2rem 1.2rem 0.5rem;
+
+}
+.transfer__btn_box>button {
+  height: 2.35rem;
+  width: 12rem;
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.5rem;
+  background-color: #3f51b5!important;
+  color: #fff;
+}
+
+.recent__box_table_box {
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+
+}
+.recent__box_table_box  .recent__text__box {
+  display: flex;
+  align-items: center;
+  border-bottom:0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  font-family: 'Lato', sans-serif;
+  
+
+
+}
+.recent__text__box_name {
+  flex-basis: 75%;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.recent__text__box_name span:first-child {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.02rem;
+
+}
+.recent__text__box_name span:nth-child(2) {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.02rem;
+
+}
+.recent__text__box_name span:nth-child(3) {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+
+}
+.recent__text__box_name span:nth-child(4) {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.02rem;
+
+}
+.recent__text__box_name span:nth-child(5) {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.02rem;
+
+}
+
+.recent__text__box_name button{
+  background-color: #e8e8e8;
+  color: rgba(0,0,0,.6);
+  border: 0.01rem solid rgba(0,0,0,.11);
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+
+
+
+}
+
+.recent__text__box_money {
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1rem 1rem 1rem;
+
+
+}
+.recent__text__box_money>p {
+  color: #21ba45;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  flex-basis: 60%;
+
+
+}
+.recent__text__box_money span {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border:0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recent__text__box_money span:hover {
+  border:0.12rem solid rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.3s ease;
+
+}
+.recent__text__box_money span .icon-edit {
+  font-size: 1.2rem;
+  color:  rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+
+}
