@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Select } from "antd";
 import type { SelectProps } from "antd";
 import { color } from "@mui/system";
+import Editdash from "./Editdash";
 
 const Dashboard = () => {
   const [show, setShow] = useState(false);
@@ -21,24 +22,93 @@ const Dashboard = () => {
   const [income, setIncome] = useState(false);
   const [active, setActive] = useState("black");
   const [Tactive, setTActive] = useState("black");
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const options: SelectProps["options"] = [];
 
-  {
-    options.push({
+  const options: SelectProps["options"] = [
+    {
       value: `Alice's Wallet`,
-      label: `Alice's Wallet Cash`,
-    });
-  }
+      label: <div className="label"><p>Alice's Wallet</p><p>Cash</p></div>,
+    }, {
+      value: `Bob's wallet`,
+      label: <div className="label"><p>Bob's wallet</p><p>Cash</p></div>,
+    },
+    {
+      value: `Car`,
+      label: <div className="label"><p>Car</p><p>Asset</p></div>,
+    },
+    {
+      value: `Car loan`,
+      label: <div className="label"><p>Car loan</p><p>Credit</p></div>,
+    },
+    {
+      value: `MasterCard *6803`,
+      label: <div className="label"><p>MasterCard *6803</p><p>Credit</p></div>,
+    },
+    {
+      value: `Visa *2474`,
+      label: <div className="label"><p>Visa *2474</p><p>Credit</p></div>,
+    },
+    {
+      value: `Checking`,
+      label: <div className="label"><p>Checking</p><p>Bank Account</p></div>,
+    },
+    {
+      value: `Savings`,
+      label: <div className="label"><p>Savings</p><p>Bank Account</p></div>,
+    }
+  ];
 
-  const optionscurrency: SelectProps["options"] = [];
+ 
 
-  {
-    optionscurrency.push({
+  const optionscurrency: SelectProps["options"] = [
+    {
       value: `USD`,
       label: `USD`,
-    });
-  }
+    },{
+      value: `EUR`,
+      label: `EUR`,
+    }
+    ,{
+      value: `JPY`,
+      label: `JPY`,
+    }
+
+  ];
+
+  const optionTags: SelectProps["options"] = [
+    {
+      value: `Groceries`,
+      label: `Groceries`,
+    },{
+      value: `Restaurant`,
+      label: `Restaurant`,
+    }
+    ,{
+      value: `Rent`,
+      label: `Rent`,
+    },{
+      value: `Income Tax`,
+      label: `Income Tax`,
+    },{
+      value: `Social security`,
+      label: `Social security`,
+    },{
+      value: `Utilities`,
+      label: `Utilities`,
+    },{
+      value: `Food`,
+      label: `Food`,
+    }
+
+  ];
+
+
+
+
+  // {
+  //   optionscurrency.push();
+  // }
 
   const handleChange = (value: string) => {
     console.log(`selected ${value}`);
@@ -177,6 +247,7 @@ const Dashboard = () => {
                           setTActive("black");
                         }}
                         style={{ color: active }}
+                        className={`nettransaction ${expense===true?"net-trans-active":""}`}
                       >
                         Expense
                       </span>
@@ -188,6 +259,8 @@ const Dashboard = () => {
                           setActive("black");
                           setTActive("black");
                         }}
+                        className={`nettransaction ${transfer===true?"net-trans-active":""}`}
+
                       >
                         Transfer
                       </span>
@@ -200,6 +273,9 @@ const Dashboard = () => {
                           setTActive("green");
                         }}
                         style={{ color: Tactive }}
+
+                        className={`nettransaction ${income===true?"net-trans-active":""}`}
+
                       >
                         Income
                       </span>
@@ -245,8 +321,10 @@ const Dashboard = () => {
                           <div className="choose__box_tags">
                             <label>Tags</label>
                             <Select
+                              mode="multiple"
+
                               size={"large"}
-                              defaultValue="Choose existing tags or add new"
+                              placeholder="Choose existing tags or add new"
                               onChange={handleChange}
                               style={{
                                 width: "100%",
@@ -254,7 +332,7 @@ const Dashboard = () => {
                                 borderRadius: "0.01rem",
                                 color: "rgba(0, 0, 0, 0.15)",
                               }}
-                              options={options}
+                              options={optionTags}
                               className="choose_label"
                             />
                           </div>
@@ -398,7 +476,8 @@ const Dashboard = () => {
                             <label>Tags</label>
                             <Select
                               size={"large"}
-                              defaultValue="Choose existing tags or add new"
+                              mode="multiple"
+                              placeholder="Choose existing tags or add new"
                               onChange={handleChange}
                               style={{
                                 width: "100%",
@@ -406,7 +485,7 @@ const Dashboard = () => {
                                 borderRadius: "0.01rem",
                                 color: "rgba(0, 0, 0, 0.15)",
                               }}
-                              options={options}
+                              options={optionTags}
                               className="choose_label"
                             />
                           </div>
@@ -445,7 +524,7 @@ const Dashboard = () => {
                     <div className="recent__text__box_money">
                       <p>6.00 USD</p>
                       <span>
-                        <MdOutlineEdit className="icon-edit" />
+                        <MdOutlineEdit className="icon-edit" onClick={()=>setModalOpen(true)} />
                       </span>
                     </div>
                   </div>
@@ -460,9 +539,9 @@ const Dashboard = () => {
                      <span>credit card payment</span>
                     </div>
                     <div className="recent__text__box_money">
-                      <p>588.20 USD</p>
+                      <p  style={{color:"gray"}}>588.20 USD</p>
                       <span>
-                        <MdOutlineEdit className="icon-edit" />
+                        <MdOutlineEdit className="icon-edit" onClick={()=>setModalOpen(true)} />
                       </span>
                     </div>
                   </div>
@@ -476,9 +555,9 @@ const Dashboard = () => {
                       <span>Savings</span>
                     </div>
                     <div className="recent__text__box_money">
-                      <p>6.00 USD</p>
+                      <p style={{color:"gray"}}>1,000.00 USD</p>
                       <span>
-                        <MdOutlineEdit className="icon-edit" />
+                        <MdOutlineEdit className="icon-edit"  onClick={()=>setModalOpen(true)}/>
                       </span>
                     </div>
                   </div>
@@ -492,9 +571,9 @@ const Dashboard = () => {
                       <button>Social security</button>
                     </div>
                     <div className="recent__text__box_money">
-                      <p>6.00 USD</p>
-                      <span>
-                        <MdOutlineEdit className="icon-edit" />
+                      <p style={{color:"red"}}>-540.00 USD</p>
+                      <span onClick={()=>setModalOpen(true)}>
+                        <MdOutlineEdit className="icon-edit" onClick={()=>setModalOpen(true)} />
                       </span>
                     </div>
                   </div>
@@ -508,9 +587,9 @@ const Dashboard = () => {
                       <button>Income Tax</button>
                     </div>
                     <div className="recent__text__box_money">
-                      <p>6.00 USD</p>
+                      <p style={{color:"red"}}>-940.00 USD</p>
                       <span>
-                        <MdOutlineEdit className="icon-edit" />
+                        <MdOutlineEdit className="icon-edit" onClick={()=>setModalOpen(true)} />
                       </span>
                     </div>
                   </div>
@@ -520,6 +599,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <Editdash modalOpen={modalOpen} setModalOpen={setModalOpen}/>
     </div>
   );
 };
