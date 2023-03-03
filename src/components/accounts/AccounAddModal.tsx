@@ -62,7 +62,7 @@ const AccounAddModal = ({accountModal,setAccountModal}:any) => {
     <span><input placeholder='Balance' type={"number"}/><button>USD</button></span>
     <span><input placeholder='Balance' type={"number"}/><button>EUR</button></span>
     <span><input placeholder='Balance' type={"number"}/><button>JPY</button></span>
-    <span>Save Account</span>
+    <button>Save Account</button>
 
             </div>
 
