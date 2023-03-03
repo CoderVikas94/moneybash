@@ -5,6 +5,7 @@ import { MdOutlineEdit } from "react-icons/md";
 import "./accounts.css";
 import { Link } from "react-router-dom";
 import AccounAddModal from "./AccounAddModal";
+import EditMoney from "./EditMoney";
 
 const Accounts = () => {
   const [cash, setCash] = useState(false);
@@ -12,6 +13,7 @@ const Accounts = () => {
   const [credit, setCredit] = useState(false);
   const [assest, setAssest] = useState(false);
   const [accountModal, setAccountModal] = useState(false);
+  const [accountEditModal, setaccountEditModal] = useState(false);
 
   return (
     <div className="dashboard__box">
@@ -41,7 +43,7 @@ const Accounts = () => {
                 </div>
                 <div className="edit_icon_box">
                   <span>
-                    <MdOutlineEdit className="icon-edit" />
+                    <MdOutlineEdit className="icon-edit" onClick={()=>setaccountEditModal(true)}/>
                   </span>
                 </div>
               </div>
@@ -56,7 +58,7 @@ const Accounts = () => {
                 </div>
                 <div className="edit_icon_box">
                   <span>
-                    <MdOutlineEdit className="icon-edit" />
+                    <MdOutlineEdit className="icon-edit" onClick={()=>setaccountEditModal(true)} />
                   </span>
                 </div>
               </div>
@@ -80,7 +82,7 @@ const Accounts = () => {
                 </div>
                 <div className="edit_icon_box">
                   <span>
-                    <MdOutlineEdit className="icon-edit" />
+                    <MdOutlineEdit className="icon-edit" onClick={()=>setaccountEditModal(true)} />
                   </span>
                 </div>
               </div>
@@ -105,7 +107,7 @@ const Accounts = () => {
                 </div>
                 <div className="edit_icon_box">
                   <span>
-                    <MdOutlineEdit className="icon-edit" />
+                    <MdOutlineEdit className="icon-edit" onClick={()=>setaccountEditModal(true)} />
                   </span>
                 </div>
               </div>
@@ -121,7 +123,7 @@ const Accounts = () => {
                 </div>
                 <div className="edit_icon_box">
                   <span>
-                    <MdOutlineEdit className="icon-edit" />
+                    <MdOutlineEdit className="icon-edit" onClick={()=>setaccountEditModal(true)} />
                   </span>
                 </div>
               </div>
@@ -137,7 +139,7 @@ const Accounts = () => {
                 </div>
                 <div className="edit_icon_box">
                   <span>
-                    <MdOutlineEdit className="icon-edit" />
+                    <MdOutlineEdit className="icon-edit"  onClick={()=>setaccountEditModal(true)}/>
                   </span>
                 </div>
               </div>
@@ -184,6 +186,7 @@ const Accounts = () => {
         </div>
       </div>
       <AccounAddModal accountModal={accountModal} setAccountModal={setAccountModal}/>
+      <EditMoney accountEditModal={accountEditModal} setaccountEditModal={setaccountEditModal}/>
     </div>
   );
 };
