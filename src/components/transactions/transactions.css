@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+
+.transaction__box_content {
+    margin-top: 1rem;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+    border-radius: 0.3rem;
+    font-family: "Lato", sans-serif;
+    box-shadow: 0 2px 6px 0 rgb(34 36 38 / 15%), 0 2px 18px 0 rgb(34 36 38 / 17%);
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .transaction__top__box {
+    display: flex;
+    border-bottom: 1px solid rgba(34,36,38,.15);
+   background: #f8f8f9;
+   padding: 1rem;
+   position: relative;
+   cursor: pointer;
+
+  }
+
+  .drop__down_calender {
+    position: absolute;
+    height: fit-content;
+    top:3.5rem;
+    left: 8.7rem;
+    width: 12.5rem;
+    border: 1px solid rgba(34,36,38,.15);
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+
+
+  }
+   .drop__down_calender>span {
+     font-size: 0.9rem;
+     font-family: 'Roboto', sans-serif;
+     padding: 0.8rem 0.2rem 0.8rem 0.5rem;
+     color:rgba(0, 0, 0, 0.7);
+
+   }
+   .drop__down_calender>span:hover {
+    background-color:rgba(0, 0, 0, 0.05) ;
+
+   }
+   .drop__down_calender>span:first-child {
+    font-weight: 600;
+    color:rgba(0, 0, 0, 0.8);
+    background-color:rgba(0, 0, 0, 0.05) ;
+
+
+   }
+
+
+
+
+  .transaction__top__box .icon-plus_span {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: rgba(0, 0, 0, 0.02);
+    width: 2.5rem;
+    height: 2.35rem;
+    border-bottom-left-radius: 0.23rem;
+    border-top-left-radius: 0.23rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.15) !important;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 0.8rem;    
+
+}
+
+.transaction__top__box .icon-calender {
+    width: 2.5rem;
+    height: 2.35rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 0.8rem; 
+    border: 0.1rem solid rgba(0, 0, 0, 0.15) !important;
+    font-size: 0.8rem;  
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+
+}
+
+.transaction__top__box  .new-btn {
+    background-color: white;
+    border: none;
+    height: 2.5rem;
+    width: 5rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.15) !important;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15) !important;
+    color: rgba(0, 0, 0, 0.6);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+
+.transaction__top__box .date-btn {
+    background-color: white;
+    border: none;
+    height: 2.5rem;
+    width: 10rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.15) !important;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15) !important;
+    color: rgba(0, 0, 0, 0.6);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
+
+.transaction__top__box .icon-filter-span {
+    background:white;
+    width: 3rem;
+    height: 2.35rem;
+    border-bottom-right-radius: 0.23rem;
+    border-top-right-radius: 0.23rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.15) !important;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 0.8rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;    
+
+
+}
+
+.transaction__box_content .transaction__transaction__box {
+    border-bottom: 1px solid rgba(34,36,38,.15);
+    background-color: white;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    padding-left: 1rem;
+    height: 3.2rem;
+
+}
+
+.transaction__box_content .transaction__transaction__box >span {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.78);
+  
+}
+.transaction__income__box {
+    display: flex;
+}
+.transaction__income__box .blank__div{
+flex-basis: 58% ;
+}
+.transaction__income__container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 42%;
+}
+
+.total__income__box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(34,36,38,.15);
+
+
+}
+.total__income__box p:first-child{
+    flex-basis: 70%;
+    color: rgba(0,0,0,.7);
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1rem;
+
+
+
+}
+.total__income__box p:last-child{
+    flex-basis: 30%;
+    color: #21ba45;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+
+
+}
+
+
+.transactions__modal .edit__box {
+    display: flex;
+    width: 100%;
+    height: 300%;
+    flex-direction: column;
+}
+.transactions__modal .edit__box .edit__text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 4rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+
+}  
+.close-X {
+  position: absolute;
+  top: -1.6rem;
+  right: -1.3rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+}
+.close-X:hover {
+  color: rgba(242, 234, 234, 0.982);
+
+}
+.transactions__modal .edit__box .edit__text .icon-file {
+  font-size: 2rem;
+
+
+}
+
+.transactions__modal .edit__box .edit__text>p {
+  font-size: 1.3rem;
+  font-weight: 400;
+
+}
+
+.edit__box .transaction__box__table {
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.3rem;
+
+}
+.edit__box .transaction__box__table .transaction__box__table_head_box {
+  display:flex ;
+  height: 2.5rem;
+  border-bottom: 0.01rem solid rgba(0, 0, 0, 0.15) !important;
+ background-color: white;
+
+}
+.edit__box .transaction__box__table .transaction__box__table_head_box>span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 33.33%;
+  font-size: 0.8rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  border-collapse: collapse;
+  color: rgba(0, 0, 0, 0.7);
+}
+.edit__box .transaction__box__table .transaction__box__table_head_box>span:first-child{
+  border-right: 0.01rem solid rgba(0, 0, 0, 0.15) !important;
+
+}
+.edit__box .transaction__box__table .transaction__box__table_head_box>span:nth-child(2){
+    border-right: 0.01rem solid rgba(0, 0, 0, 0.15) !important;
+  
+  }
+.transactions__modal >.ant-modal-content {
+  padding: 0!important;
+  border-radius: 0.4rem!important;
+  
+}
+.ant-modal-mask {
+
+  background-color: rgb(30 27 27 / 90%)!important;
+}
+
+.transaction__box__table_form .filter__from__box {
+    width: 100%;
+}
+
+
+.filter__modal .edit__box {
+    display: flex;
+    width: 100%;
+    height: 300%;
+    flex-direction: column;
+    
+}
+
+.filter__modal .edit__box .edit__text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 4rem;
+  padding-left: 1rem;
+  border-bottom: 0.01rem solid rgba(0, 0, 0, 0.15) !important;
+
+
+}  
+
+.filter__modal  .edit__box .edit__text .icon-file {
+    font-size: 2rem;
+  
+  
+  }
+
+  .filter__modal .ant-modal-content {
+    padding: 0!important;
+  }
+  
+  .filter__modal  .edit__box .edit__text>p {
+    font-size: 1.3rem;
+    font-weight: 400;
+  
+  }
+
+  .filter__box__table_form {
+    display: flex;
+    flex-direction: column;
+  }
+  .filter__box__table_form .filter__from__box {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+  .filter__modal .ant-select-selection-item p {
+    margin: 0!important;
+    padding: 0!important;
+  }
+  .filter__modal .ant-select-selection-item p:last-child {
+    display: none;
+  }
+
+  .filter__from__box >label {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .filter-model-box {
+    margin-top: 1rem;
+    border-top: 0.01rem solid rgba(0, 0, 0, 0.15) !important;
+    background:rgba(0, 0, 0, 0.05) ;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+
+  }
+  .filter-model-box button:first-child {
+    box-shadow: inset 0 0 0 1px transparent, inset 0 0 0 0 rgb(34 36 38 / 15%);
+   cursor: pointer;
+   background: #e0e1e2;
+   color: rgba(0,0,0,.6);
+   border-radius: 0.28571429rem;
+   text-align: center;
+   border: none;
+   width: 6rem;
+   height: 2.4rem;
+   font-size: 0.8rem;
+  }
+  .filter-model-box button:last-child {
+    box-shadow: inset 0 0 0 1px transparent, inset 0 0 0 0 rgb(34 36 38 / 15%);
+   cursor: pointer;
+   background: #21ba45;
+   color:white;
+   border-radius: 0.28571429rem;
+   text-align: center;
+   border: none;
+   width: 6rem;
+   height: 2.4rem;
+   font-size: 0.8rem;
+  }
+  

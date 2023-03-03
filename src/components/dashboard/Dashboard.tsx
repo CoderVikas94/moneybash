@@ -106,9 +106,7 @@ const Dashboard = () => {
 
 
 
-  // {
-  //   optionscurrency.push();
-  // }
+  
 
   const handleChange = (value: string) => {
     console.log(`selected ${value}`);

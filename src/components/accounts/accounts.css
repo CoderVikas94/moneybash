@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.accounts__box_content {
+  margin-top: 1rem;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.3rem;
+  font-family: "Lato", sans-serif;
+  box-shadow: 0 2px 6px 0 rgb(34 36 38 / 15%), 0 2px 18px 0 rgb(34 36 38 / 17%);
+  font-family: "Roboto", sans-serif;
+}
+
+.accounts__top__box {
+  display: flex;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+  background: #f8f8f9;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.accounts__top__box .icon-plus_span {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: rgba(0, 0, 0, 0.02);
+  width: 2.5rem;
+  height: 2.35rem;
+  border-bottom-left-radius: 0.23rem;
+  border-top-left-radius: 0.23rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.15);
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.accounts__top__box .new-btn {
+  background-color: white;
+  height: 2.5rem;
+  width: 4rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.15);
+  border-left: none !important;
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.accounts__box {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 01rem 0 1rem;
+  border-bottom: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  background-color: rgba(77, 78, 80, 0.05);
+  cursor: pointer;
+}
+.accounts__box > h3 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  flex-basis: 70%;
+}
+.accounts__box > h3:last-child {
+  color: #21ba45;
+  letter-spacing: 0.02rem;
+  flex-basis: 15%;
+}
+
+.accounts__wallet__box {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+}
+.accounts__wallet__name_box_text {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+}
+.accounts__wallet__name_box_text > h3 {
+  color: #21ba45;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  font-size: 1rem;
+  margin: 0.5rem 0.12rem 0.5rem 0.12rem;
+  flex-basis: 70%;
+}
+.accounts__wallet__name_box {
+  display: flex;
+  justify-content: start;
+  flex-basis: 80%;
+}
+.accounts__wallet__name_box > a {
+  color: #4183c4;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.edit_icon_box {
+  flex-basis: 10%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.edit_icon_box > span {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit_icon_box > span:hover {
+  border: 0.12rem solid rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.3s ease;
+}
+.edit_icon_box span > .icon-edit {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.account__modal_edit__box {
+  display: flex;
+  flex-direction: column;
+}
+.account__blank__div {
+  border-top: 0.01rem solid rgba(0, 0, 0, 0.15) !important;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.account__modal_edit__box .account__modal__edit__text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 4rem;
+  padding-left: 1rem;
+  border-bottom: 0.01rem solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.account__modal_edit__box .account__modal__edit__text .icon-file {
+  font-size: 2rem;
+}
+
+.account__modal_edit__box .account__modal__edit__text > p {
+  font-size: 1.12rem;
+  font-weight: 400;
+}
+
+.account__modal > .ant-modal-content {
+  padding: 0 !important;
+  border-radius: 0.2rem !important;
+}
+.form__group__box {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+.name__currency__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-basis: 58%;
+}
+.name__currency__box label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.cash__group__box label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.9);
+}
+.cash__group__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-basis: 42%;
+}
+.cash__group__box .account__modal__box {
+    margin-top: 0.29rem;
+}
+
+.cash__group__box .account__modal__box .ant-select-selector {
+  border-radius: 0.2rem;
+}
+.name__currency__box label > p {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.9);
+}
+.name__currency__box label > input {
+  height: 2.1rem;
+  border-radius: 0.25rem;
+  border: 0.05rem solid rgba(0, 0, 0, 0.15);
+  padding: 0.2rem 1rem 0.2rem 1rem;
+}
+.name__currency__box > span {
+  margin: 0.5rem 0 0.5rem 0;
+  font-size: 0.93rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.name__currency__box > span > input {
+  width: 1rem;
+  height: 1rem;
+}
+.name__currency__box > span > input[type="checkbox"] {
+  accent-color: black;
+}
+.cash__group__box {
+}

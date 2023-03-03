@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Modal } from "antd";
-import "./dashboard.css";
+import "./transactions.css";
 import { AiOutlineFile } from "react-icons/ai";
 import { ImCross } from "react-icons/im";
 import { MdDelete } from "react-icons/md";
 import { Select } from "antd";
 import type { SelectProps } from "antd";
 
-const Editdash = ({ modalOpen, setModalOpen }: any) => {
 
- 
-  const [expense, setExpense] = useState(true);
+const Edittransactions = ({ modalOpen, setModalOpen }: any) => {
+
+    const [expense, setExpense] = useState(true);
   const [transfer, setTransfer] = useState(false);
   const [income, setIncome] = useState(false);
   const [active, setActive] = useState("red");
@@ -141,6 +141,11 @@ const Editdash = ({ modalOpen, setModalOpen }: any) => {
     console.log(`selected ${value}`);
   };
 
+
+
+
+
+
   return (
     <>
       <Modal
@@ -149,7 +154,7 @@ const Editdash = ({ modalOpen, setModalOpen }: any) => {
         onOk={() => setModalOpen(false)}
         onCancel={() => setModalOpen(false)}
         footer={null}
-        className="edit__modal"
+        className="transactions__modal"
         closable={false}
         width={"50%"}
 
@@ -157,11 +162,11 @@ const Editdash = ({ modalOpen, setModalOpen }: any) => {
         <div className="edit__box">
           <div className="edit__text">
             <AiOutlineFile className="icon-file" />
-            <p>Edit Transaction</p>
+            <p>New Transaction</p>
             <ImCross className="close-X" onClick={()=>setModalOpen(false)}/>
           </div>
           <div className="transaction__box__table">
-            <div className="transaction__box__table_head">
+            <div className="transaction__box__table_head_box">
               <span
                 onClick={() => {
                   setExpense(true);
@@ -184,7 +189,6 @@ const Editdash = ({ modalOpen, setModalOpen }: any) => {
                   setActive("black");
                   setTActive("black");
                 }}
-                style={{display:"none"}}
                 
               >
                 Transfer
@@ -263,10 +267,100 @@ const Editdash = ({ modalOpen, setModalOpen }: any) => {
                 </div>
                 <div className="note__box">
                   <input type={"text"} placeholder={"Note"} />
-                  <button>Save Expense</button>
+                  <button>Add Expense</button>
                 </div>
               </>
             )}
+            {transfer === true && (
+                      <>
+                        <div className="transaction__box__table_form">
+                          <div className="from__box">
+                            <label>From</label>
+                            <Select
+                              size={"large"}
+                              defaultValue="Alice's wallet"
+                              onChange={handleChange}
+                              style={{
+                                width: "100%",
+                                marginTop: "0.3rem",
+                                borderRadius: "0.01rem",
+                              }}
+                              options={options}
+                              className="from_label"
+                            />
+                          </div>
+                          <div className="currency__box">
+                            <input
+                              id="currency"
+                              type={"number"}
+                              step="0.01"
+                              min="0"
+                              max="10"
+                              placeholder="0.03"
+                            />
+                            <Select
+                              size={"large"}
+                              defaultValue="USD"
+                              onChange={handleChange}
+                              style={{ width: "40%" }}
+                              options={optionscurrency}
+                              className="currency"
+                            />
+                          </div>
+                        </div>
+                        <div className="choose__box">
+                          <div className="choose__box_tags">
+                            <label>To</label>
+                            <Select
+                              size={"large"}
+                              defaultValue="Bob's Wallet"
+                              onChange={handleChange}
+                              style={{
+                                width: "100%",
+                                marginTop: "0.3rem",
+                                borderRadius: "0.01rem",
+                                color: "rgba(0, 0, 0, 0.15)",
+                              }}
+                              options={options}
+                              className="choose_label"
+                            />
+                          </div>
+                          <div className="currency__box">
+                            <input
+                              id="currency"
+                              type={"number"}
+                              step="0.01"
+                              min="0"
+                              max="10"
+                              placeholder="0.03"
+                            />
+                            <Select
+                              size={"large"}
+                              defaultValue="USD"
+                              onChange={handleChange}
+                              style={{ width: "40%" }}
+                              options={optionscurrency}
+                              className="currency"
+                            />
+                          </div>
+                        </div>
+                        <div className="note__box">
+                          <input
+                            type={"text"}
+                            placeholder={"Note"}
+                            style={{ flexBasis: "53%" }}
+                          />
+                          <input
+                            type={"date"}
+                            value="2023-03-02"
+                            style={{ flexBasis: "30%" }}
+                          />
+                        </div>
+                        <div className="transfer__btn_box">
+                          <button>Add Transfer</button>
+                        </div>
+                      </>
+                    )}
              {income === true && (
               <>
                 <div className="transaction__box__table_form">
@@ -326,19 +420,16 @@ const Editdash = ({ modalOpen, setModalOpen }: any) => {
                 </div>
                 <div className="note__box">
                   <input type={"text"} placeholder={"Note"} />
-                  <button>Save Income</button>
+                  <button>Add Income</button>
                 </div>
               </>
             )}
 
           </div>
-          <div className="modal-del-box">
-            <button>Delete<MdDelete style={{fontSize:"1.3rem"}}/></button>
-          </div>
         </div>
       </Modal>
     </>
-  );
-};
+  )
+}
 
-export default Editdash;
+export default Edittransactions
