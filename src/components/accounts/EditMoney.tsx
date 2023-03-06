@@ -3,6 +3,7 @@ import { Modal ,Select,SelectProps} from "antd";
 import "./accounts.css";
 import {AiOutlineFile} from 'react-icons/ai'
 import {ImCross} from 'react-icons/im'
+import { letterSpacing } from '@mui/system';
 
 const EditMoney = ({accountEditModal,setaccountEditModal}:any) => {
 
@@ -60,9 +61,10 @@ const EditMoney = ({accountEditModal,setaccountEditModal}:any) => {
       size={"large"}
 
     /></label>
-    <span><input placeholder='Balance' type={"number"}/><button>USD</button></span>
-    <span><input placeholder='Balance' type={"number"}/><button>EUR</button></span>
-    <span><input placeholder='Balance' type={"number"}/><button>JPY</button></span>
+    <span style={{textAlign:"end",color:"#21ba45",letterSpacing:'0.1rem',fontFamily: 'Roboto Mono'
+}}>428.82 USD</span>
+    <span style={{textAlign:"end",color:"#21ba45",letterSpacing:'0.1rem',fontFamily: 'Roboto Mono'}}>0.00 EUR</span>
+    <span style={{textAlign:"end",color:"#21ba45",letterSpacing:'0.1rem',marginBottom:"1rem",fontFamily: 'Roboto Mono'}}>0 JPY</span>
     <button>Save Account</button>
 
             </div>

@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+.setting__box_content {
+  margin-top: 1rem;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  font-family: "Lato", sans-serif;
+  box-shadow: 0 2px 6px 0 rgb(34 36 38 / 15%), 0 2px 18px 0 rgb(34 36 38 / 17%);
+  font-family: "Roboto", sans-serif;
+}
+.currency__setting__box {
+  display: flex;
+  flex-direction: column;
+}
+.currency__setting__box > span {
+  display: flex;
+  align-items: center;
+}
+.currency__setting__box > span h2 {
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.75);
+}
+.currency__setting__box > span .icon-right-setting {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.import__box {
+  font-family: "Lato", sans-serif;
+  position: relative;
+}
+.import__box > p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 0 !important;
+}
+.import__box > button {
+  font-size: 0.92rem;
+  cursor: pointer;
+  height: 2.3rem;
+  outline: 0;
+  border: none;
+  vertical-align: initial;
+  background: #e0e1e2;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 0.78571429em 1.2rem;
+  border-radius: 0.28rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#csvFileInput {
+  position: absolute;
+  top: 2.5rem;
+  z-index: 2;
+  height: 2.3rem;
+  border-radius: 0.28rem;
+  opacity: 0;
+}
+#csvFileInput:hover + .import__box > button {
+  box-shadow: inset 0 0 0 1px transparent, inset 0 0 0 0 rgb(34 36 38 / 15%);
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.import__box > button:hover {
+  box-shadow: inset 0 0 0 1px transparent, inset 0 0 0 0 rgb(34 36 38 / 15%);
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.user__box {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+.user__box > button {
+  font-size: 0.92rem;
+  box-shadow: inset 0 0 0 1px transparent, inset 0 0 0 0 rgb(34 36 38 / 15%);
+  cursor: pointer;
+  height: 2.2rem;
+  outline: 0;
+  border: none;
+  vertical-align: initial;
+  background: #e0e1e2 none;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 0.78571429em 1.1rem;
+  border-top-left-radius: 0.28rem;
+  border-bottom-left-radius: 0.28rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.user__box > span {
+  width: 2.6rem;
+  height: 2.2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 0.28rem;
+  border-bottom-right-radius: 0.28rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user__box > span .icon-refresh {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.content_pop_box {
+  display: flex;
+  flex-direction: column;
+}
+.content_pop_box > p {
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+.content_pop_box .confirm_box {
+  display: flex;
+  justify-content: end;
+}
+.content_pop_box .confirm_box > button {
+  background-color: #db2828;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: none;
+  height: 2.2rem;
+  width: 6rem;
+  margin-top: 0.8rem;
+}
+.currency__select__box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.currency__select__box > span {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.currency__select__box > span label {
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+}
+.currency-table-box {
+  width: 100%;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Lato", sans-serif;
+  margin-top: 1rem;
+  text-align: center;
+}
+.currency-table-box table {
+  border-collapse: collapse;
+}
+.currency-table-box table thead tr th,
+.currency-table-box table tbody tr td {
+  border-collapse: collapse;
+  border-bottom: 0.01rem solid rgba(34, 36, 38, 0.15);
+  border-left: 0.01rem solid rgba(34, 36, 38, 0.15);
+  border-right: 0.01rem solid rgba(34, 36, 38, 0.15);
+}
+.currency-table-box table {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.currency-table-box table thead tr {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.currency-table-box table thead tr th {
+  background: rgba(34, 36, 38, 0.15);
+  padding: 0.7rem;
+}
+
+.currency-table-box table thead tr th:nth-child(2) {
+    border-top-left-radius:0.5rem ;
+}
+.currency-table-box table tbody tr:nth-child(3) td:nth-child(1) {
+    border-bottom-left-radius:0.5rem ;
+}
+.currency-table-box table thead tr th:nth-child(4) {
+    border-top-right-radius:0.5rem ;
+}
+.currency-table-box table tbody tr {
+  font-size: 1rem;
+}
+
+.currency-table-box table thead tr > th:first-child {
+  background-color: white;
+  border: none !important;
+  visibility: hidden;
+}
+.currency-table-box table tbody tr > td:first-child {
+  background: rgba(34, 36, 38, 0.15);
+  padding: 0.7rem;
+  font-size: 1rem;
+}

@@ -121,7 +121,8 @@ body {
     border-top: 0.1rem solid rgba(0, 0, 0, 0.15) !important;
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15) !important;
     color: rgba(0, 0, 0, 0.6);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
 
 .transaction__top__box .icon-filter-span {
     background:white;

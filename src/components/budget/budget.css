@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.budget_box_content {
+    margin-top: 1rem;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    background: #f8f8f9;
+    border: 0.12rem solid rgba(0, 0, 0, 0.15) !important;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    gap: 2rem;
+    font-family: "Lato", sans-serif;
+    box-shadow: 0 2px 6px 0 rgb(34 36 38 / 15%), 0 2px 18px 0 rgb(34 36 38 / 17%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.budget_box {
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.budget_box .icon-hour {
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+.budget__text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    height: 100%;
+}
+.budget__text h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    margin-bottom: 0.05rem;
+    margin-top: 0.1rem;
+    font-family: 'Lato', sans-serif;
+
+}
+.budget__text p {
+    font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 0.01rem;
+  margin-top: 0.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.05rem;
+
+
+}
