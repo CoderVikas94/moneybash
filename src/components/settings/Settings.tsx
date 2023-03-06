@@ -6,12 +6,16 @@ import { AiFillFileText } from "react-icons/ai";
 import { HiOutlineRefresh } from "react-icons/hi";
 import { Popover } from "antd";
 import { Select, SelectProps } from "antd";
+import ReactCountryFlag from "react-country-flag";
+import { countries } from "../../../countries.json";
 
 const Settings = () => {
   const [currency, setCurrency] = useState(false);
   const [importdata, setImportdata] = useState(false);
   const [exportdata, setExportdata] = useState(false);
   const [user, setUser] = useState(false);
+
+  console.log("countries", countries);
 
   const content = (
     <div className="content_pop_box">
@@ -87,14 +91,38 @@ const Settings = () => {
     link.click();
   };
 
-  const options: SelectProps["options"] = [];
+  const options: any = countries.country.map((item) => {
+    const value = {
+      value: item.countryName,
+      label: (
+        <div className="country__box">
+          <ReactCountryFlag
+            countryCode={item.countryCode}
+            svg
+            />
+          <span>{item.currencyCode}</span>,
+          <span>{item.countryName}</span>
+        </div>
+      ),
+    };
 
-  for (let i = 10; i < 36; i++) {
-    options.push({
-      label: i.toString(36) + i,
-      value: i.toString(36) + i,
-    });
-  }
+    return value;
+  });
+
+  const optionscurrency: SelectProps["options"] = [
+    {
+      value: `USD`,
+      label: `USD`,
+    },
+    {
+      value: `EUR`,
+      label: `EUR`,
+    },
+    {
+      value: `JPY`,
+      label: `JPY`,
+    },
+  ];
 
   const handleChange = (value: string[]) => {
     console.log(`selected ${value}`);
@@ -113,71 +141,72 @@ const Settings = () => {
             )}
             <h2>CURRENCY</h2>
           </span>
-          {currency &&
-          <>
-          <div className="currency__select__box">
-            <span>
-              <label>Base Currency</label>
-              <Select
-                allowClear
-                style={{ width: "100%", borderRadius: "0.5rem" }}
-                placeholder="Please select"
-                defaultValue={["a10", "c12"]}
-                onChange={handleChange}
-                options={options}
-              />
-            </span>
-            <span>
-              <label>Additional Currencies(optional)</label>
-              <Select
-                mode="multiple"
-                allowClear
-                style={{ width: "100%" }}
-                placeholder="Please select"
-                defaultValue={["a10", "c12"]}
-                onChange={handleChange}
-                options={options}
-              />
-            </span>
-          </div>
-          <div className="currency-table-box">
-            <table>
-             <thead>
-              <tr>
-              <th></th>
-              <th>IDR</th>
-              <th>EUR</th>
-              <th>JPY</th>
-              </tr>
-              </thead> 
-              <tbody>
-                <tr>
-                  <td>IDR</td>
-                  <td>1.0000</td>
-                  <td>0.000061</td>
-                  <td>0.0089</td>
-                </tr>
-                <tr>
-                  <td>EUR</td>
-                  <td>16,393.4426</td>
-                  <td>1.0000</td>
-                  <td>145.4426</td>
-                </tr>
-                <tr>
-                  <td>JPY</td>
-                  <td>112.7142</td>
-                  <td>0.0069</td>
-                  <td>1.0000</td>
-                </tr>
-              </tbody>
+          {currency && (
+            <>
+              <div className="currency__select__box">
+                <span>
+                  <label>Base Currency</label>
+                  <Select
+                    allowClear
+                    style={{ width: "100%", borderRadius: "0.5rem" }}
+                    placeholder="Please select"
+                    defaultValue={["US", "US Dollar"]}
+                    onChange={handleChange}
+                    options={options}
+                    size="large"
 
-            </table>
-            
-
-          </div>
-</>
-}
-</div>
+                  />
+                </span>
+                <span>
+                  <label>Additional Currencies(optional)</label>
+                  <Select
+                    mode="multiple"
+                    size="large"
+                    allowClear
+                    style={{ width: "100%" }}
+                    placeholder="Please select"
+                    defaultValue={["USD", "EUR"]}
+                    onChange={handleChange}
+                    options={optionscurrency}
+                    className="currency-select"
+                  />
+                </span>
+              </div>
+              <div className="currency-table-box">
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>IDR</th>
+                      <th>EUR</th>
+                      <th>JPY</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>IDR</td>
+                      <td>1.0000</td>
+                      <td>0.000061</td>
+                      <td>0.0089</td>
+                    </tr>
+                    <tr>
+                      <td>EUR</td>
+                      <td>16,393.4426</td>
+                      <td>1.0000</td>
+                      <td>145.4426</td>
+                    </tr>
+                    <tr>
+                      <td>JPY</td>
+                      <td>112.7142</td>
+                      <td>0.0069</td>
+                      <td>1.0000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </>
+          )}
+        </div>
 
         <div className="currency__setting__box">
           <span onClick={() => setImportdata(!importdata)}>

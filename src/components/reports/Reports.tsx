@@ -75,8 +75,8 @@ const Reports = () => {
       value: `Alice's Wallet`,
       label: (
         <div className="label">
-          <p>Alice's Wallet</p>
-          <p>Cash</p>
+          <span>Alice's Wallet</span>
+          <span>Cash</span>
         </div>
       ),
     },
@@ -84,8 +84,8 @@ const Reports = () => {
       value: `Bob's wallet`,
       label: (
         <div className="label">
-          <p>Bob's wallet</p>
-          <p>Cash</p>
+          <span>Bob's wallet</span>
+          <span>Cash</span>
         </div>
       ),
     },
@@ -93,8 +93,8 @@ const Reports = () => {
       value: `Car`,
       label: (
         <div className="label">
-          <p>Car</p>
-          <p>Asset</p>
+          <span>Car</span>
+          <span>Asset</span>
         </div>
       ),
     },
@@ -102,8 +102,8 @@ const Reports = () => {
       value: `Car loan`,
       label: (
         <div className="label">
-          <p>Car loan</p>
-          <p>Credit</p>
+          <span>Car loan</span>
+          <span>Credit</span>
         </div>
       ),
     },
@@ -111,8 +111,8 @@ const Reports = () => {
       value: `MasterCard *6803`,
       label: (
         <div className="label">
-          <p>MasterCard *6803</p>
-          <p>Credit</p>
+          <span>MasterCard *6803</span>
+          <span>Credit</span>
         </div>
       ),
     },
@@ -120,8 +120,8 @@ const Reports = () => {
       value: `Visa *2474`,
       label: (
         <div className="label">
-          <p>Visa *2474</p>
-          <p>Credit</p>
+          <span>Visa *2474</span>
+          <span>Credit</span>
         </div>
       ),
     },
@@ -129,8 +129,8 @@ const Reports = () => {
       value: `Checking`,
       label: (
         <div className="label">
-          <p>Checking</p>
-          <p>Bank Account</p>
+          <span>Checking</span>
+          <span>Bank Account</span>
         </div>
       ),
     },
@@ -138,8 +138,8 @@ const Reports = () => {
       value: `Savings`,
       label: (
         <div className="label">
-          <p>Savings</p>
-          <p>Bank Account</p>
+          <span>Savings</span>
+          <span>Bank Account</span>
         </div>
       ),
     },

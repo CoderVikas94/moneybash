@@ -219,3 +219,17 @@ body {
   padding: 0.7rem;
   font-size: 1rem;
 }
+.country__box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.currency-select .ant-select-selection-item >.currency__select__box {
+  height: 1.5rem!important;
+
+}
+.currency-select .ant-select-selection-item >.currency__select__box>p{
+  margin: 0!important;
+  padding: 0!important;
+}
