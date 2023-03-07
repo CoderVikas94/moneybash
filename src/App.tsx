@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/header/Header";
@@ -9,11 +9,36 @@ import Accounts from "./components/accounts/Accounts";
 import Reports from "./components/reports/Reports";
 import Budget from "./components/budget/Budget";
 import Settings from "./components/settings/Settings";
+import Loader from "./Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true)
+
+
+  useEffect(() => {
+
+ 
+   let timer1 = setTimeout(() => setLoading(false), 1000);
+
+  
+      return () => {
+        clearTimeout(timer1);
+      };
+  
+  }, [])
+
+
+
+
+
+
+
   return (
     <BrowserRouter>
       <div className="main_container">
+       {loading ?<Loader/>
+       :
+       <>
         <Header />
         <div className="container">
           <Routes>
@@ -26,6 +51,8 @@ function App() {
           </Routes>
         </div>
         <Sidebar />
+        </>
+        }
       </div>
     </BrowserRouter>
   );

@@ -233,3 +233,14 @@ body {
   margin: 0!important;
   padding: 0!important;
 }
+
+
+.currency-select .ant-select-selection-item-content .country__box img:nth-child(1) {
+  display: none;
+
+}
+
+.currency-select .ant-select-selection-item-content .country__box span:nth-child(3) {
+  display: none;
+
+}

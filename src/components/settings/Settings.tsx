@@ -15,7 +15,6 @@ const Settings = () => {
   const [exportdata, setExportdata] = useState(false);
   const [user, setUser] = useState(false);
 
-  console.log("countries", countries);
 
   const content = (
     <div className="content_pop_box">
@@ -109,20 +108,6 @@ const Settings = () => {
     return value;
   });
 
-  const optionscurrency: SelectProps["options"] = [
-    {
-      value: `USD`,
-      label: `USD`,
-    },
-    {
-      value: `EUR`,
-      label: `EUR`,
-    },
-    {
-      value: `JPY`,
-      label: `JPY`,
-    },
-  ];
 
   const handleChange = (value: string[]) => {
     console.log(`selected ${value}`);
@@ -150,7 +135,7 @@ const Settings = () => {
                     allowClear
                     style={{ width: "100%", borderRadius: "0.5rem" }}
                     placeholder="Please select"
-                    defaultValue={["US", "US Dollar"]}
+                    defaultValue={["USD US Dollar"]}
                     onChange={handleChange}
                     options={options}
                     size="large"
@@ -167,7 +152,7 @@ const Settings = () => {
                     placeholder="Please select"
                     defaultValue={["USD", "EUR"]}
                     onChange={handleChange}
-                    options={optionscurrency}
+                    options={options}
                     className="currency-select"
                   />
                 </span>

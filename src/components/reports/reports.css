@@ -144,16 +144,11 @@ body {
 .recent__filter_label {
   margin: 0!important;
 }
-
-.reports__select__box .recent__filter_label .ant-select-selection-item p {
-  margin: 0!important;
-  padding: 0!important;
-}
-.reports__select__box .recent__filter_label>.ant-select-selection-item-content .label {
+.label {
   display: flex;
   align-items: center;
-  margin-top: 0!important;
+  justify-content: space-between;
 }
-.reports__select__box .recent__filter_label>.ant-select-selection-item-content .label> p:last-child {
+.ant-select-selection-item-content .label span:nth-child(2) {
   display: none!important;
 }
