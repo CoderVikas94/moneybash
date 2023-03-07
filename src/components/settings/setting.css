@@ -8,7 +8,7 @@ body {
 }
 .setting__box_content {
   margin-top: 1rem;
-  width: 100%;
+  width: 96.5%;
   height: max-content;
   display: flex;
   flex-direction: column;

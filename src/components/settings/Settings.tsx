@@ -5,7 +5,7 @@ import { IoMdArrowDropdown, IoMdArrowDropright } from "react-icons/io";
 import { AiFillFileText } from "react-icons/ai";
 import { HiOutlineRefresh } from "react-icons/hi";
 import { Popover } from "antd";
-import { Select, SelectProps } from "antd";
+import { Select } from "antd";
 import ReactCountryFlag from "react-country-flag";
 import { countries } from "../../../countries.json";
 
@@ -135,7 +135,7 @@ const Settings = () => {
                     allowClear
                     style={{ width: "100%", borderRadius: "0.5rem" }}
                     placeholder="Please select"
-                    defaultValue={["USD US Dollar"]}
+                    defaultValue={["USD United States of America"]}
                     onChange={handleChange}
                     options={options}
                     size="large"

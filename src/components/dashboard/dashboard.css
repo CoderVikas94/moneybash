@@ -11,12 +11,13 @@ body {
   padding: 1rem 11rem 2rem 8rem;
   display: flex;
   flex-direction: column;
+  
 
 }
 
 .dashboard__box_content {
   margin-top: 1rem;
-  width: 100%;
+  width: 96.5%;
   height: max-content;
   display: flex;
   background: white;
