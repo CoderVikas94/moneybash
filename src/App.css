@@ -112,3 +112,17 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.refresh_sign {
+  animation: animName 2s linear 1;
+
+}
+
+@keyframes animName {
+  0%{
+     transform: rotate(0deg);
+    }
+ 100%{
+     transform: rotate(360deg);
+    }
+ }

@@ -8,6 +8,10 @@ const Header = () => {
   const [rotate, setRotate] = useState(false)
   const location = useLocation();
 
+
+
+  
+
   return (
     <div className='header__box'>
       <div className="header__text__box">

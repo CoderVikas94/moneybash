@@ -610,7 +610,7 @@ border-radius: 0px 8px 8px 0px;
 }
 
 .rotate {
-  animation: mymove 6s forwards;
+  animation: mymove 3s linear;
 }
 @keyframes mymove {
   50% {transform: rotate(360deg);}
