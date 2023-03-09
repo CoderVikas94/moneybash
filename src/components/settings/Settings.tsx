@@ -98,9 +98,10 @@ const Settings = () => {
           <ReactCountryFlag
             countryCode={item.countryCode}
             svg
+            className="flag"
             />
-          <span>{item.currencyCode}</span>,
-          <span>{item.countryName}</span>
+          <span>{item.currencyCode}</span>
+          <span>,{item.countryName}</span>
         </div>
       ),
     };

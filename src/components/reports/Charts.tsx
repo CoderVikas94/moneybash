@@ -7,6 +7,8 @@ import {
   Title,
   Tooltip,
   Legend,
+  Scriptable,
+  ScriptableScaleContext,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { faker } from '@faker-js/faker';
@@ -50,6 +52,14 @@ export const data = {
     },
   ],
 };
+
+export interface GridLineOptions {
+  dashOffset:Scriptable<number, ScriptableScaleContext>;
+  dash: Scriptable<number, ScriptableScaleContext>;
+
+  
+}
+
 
 export function Charts() {
   return <Bar options={options} style={{marginRight:"1rem"}} data={data} />;

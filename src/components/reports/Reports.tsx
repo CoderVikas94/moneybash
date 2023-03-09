@@ -230,6 +230,8 @@ const Reports = () => {
                         width: "100%",
                         borderRadius: "0.01rem",
                         marginTop: "1rem",
+                        cursor:"pointer"
+
 
                       }}
                       showArrow={true}

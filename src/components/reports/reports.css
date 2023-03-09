@@ -40,6 +40,7 @@ body {
     height: 2.5rem;
     border-top-right-radius: none!important;
     border-bottom-right-radius: none!important;
+    cursor: pointer;
     
   }
   .icon-backward_span {
@@ -55,6 +56,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 0.8rem;
+    cursor: pointer;
   }
 
   
@@ -70,6 +72,8 @@ body {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-bottom-left-radius: 0.23rem;
   border-top-left-radius: 0.23rem;
+  cursor: pointer;
+
 }
 
 .drop__down_expense {
@@ -143,6 +147,7 @@ body {
 
 .recent__filter_label {
   margin: 0!important;
+  cursor: pointer;
 }
 .label {
   display: flex;
