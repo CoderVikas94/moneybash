@@ -422,7 +422,7 @@ border-radius: 0px 8px 8px 0px;
 
 }
 .recent__text__box_name {
-  flex-basis: 75%;
+  flex-basis: 83%;
   padding: 1.5rem 1rem 1.5rem 1rem;
   display: flex;
   align-items: center;
@@ -474,11 +474,11 @@ border-radius: 0px 8px 8px 0px;
 }
 
 .recent__text__box_money {
-  flex-basis: 31%;
+  flex-basis: 32%;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 1rem 1rem 1rem 1rem;
+  gap: 0.2rem;
+  padding: 1rem 0.2rem 1rem 0.2rem;
 
 
 }
@@ -487,7 +487,7 @@ border-radius: 0px 8px 8px 0px;
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.02rem;
-  flex-basis: 60%;
+  flex-basis: 62%;
 
 
 }
